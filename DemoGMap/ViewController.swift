@@ -21,6 +21,7 @@ class ViewController: UIViewController {
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         mapView.delegate = self
+        
 //        let camera = GMSCameraPosition.camera(withLatitude: 21, longitude: 105.9, zoom: 6.0)
 //        mapView.camera = camera
 //        showMaker(position: camera.target)
@@ -91,6 +92,8 @@ extension ViewController: CLLocationManagerDelegate {
         
         //updates the map’s camera to center around the user’s current location.
         mapView.camera = GMSCameraPosition(target: location.coordinate, zoom: 15, bearing: 0, viewingAngle: 0)
+        let locValueL: CLLocationCoordinate2D = (manager.location?.coordinate)!
+        print("locations: \(locValueL.latitude), \(locValueL.longitude)")
         locationManager.stopUpdatingLocation()
     }
 }
