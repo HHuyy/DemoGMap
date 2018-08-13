@@ -8,6 +8,7 @@
 
 import UIKit
 import GoogleMaps
+import GooglePlaces
 
 class ViewController: UIViewController {
     @IBOutlet weak var mapView: GMSMapView!
@@ -32,6 +33,13 @@ class ViewController: UIViewController {
 //        maker.snippet = "Viet Nam"
 //        maker.map = mapView
 //    }
+    
+    @IBAction func autocompleteClicked(_ sender: UIButton) {
+        let autocompleteController = GMSAutocompleteViewController()
+        autocompleteController.delegate = self
+        present(autocompleteController, animated: true, completion: nil)
+    }
+    
     
     private func reverseGeocodeCoordinate(_ coordinate: CLLocationCoordinate2D) {
         //Creates a GMSGeocoder object to turn a latitude and longitude coordinate into a street address.
@@ -95,6 +103,30 @@ extension ViewController: GMSMapViewDelegate {
     }
 }
 
+extension ViewController: GMSAutocompleteViewControllerDelegate {
+    func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
+        print("Place name: \(place.name)")
+        print("Place address: \(place.formattedAddress ?? "")")
+        print("Place attributions: \(String(describing: place.attributions))")
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
+        print("Error: \(error.localizedDescription)")
+    }
+    
+    func wasCancelled(_ viewController: GMSAutocompleteViewController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func didRequestAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+    }
+    
+    func didUpdateAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
+    }
+}
 
 //extension ViewController: GMSMapViewDelegate {
 //    /* handles Info Window tap */

@@ -20,7 +20,7 @@
 		AAD77A2E149C2C5AC51C6C51 /* Pods-DemoGMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoGMap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DemoGMap/Pods-DemoGMap.debug.xcconfig"; sourceTree = "<group>"; };
 		DB6876F2211D1FFA002E7B8C /* DemoGMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoGMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB6876F5211D1FFA002E7B8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DB6876F7211D1FFA002E7B8C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DB6876F7211D1FFA002E7B8C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; wrapsLines = 1; };
 		DB6876FA211D1FFA002E7B8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DB6876FC211D1FFA002E7B8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB6876FF211D1FFA002E7B8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
