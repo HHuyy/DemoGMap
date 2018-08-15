@@ -30,6 +30,14 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_me" translatesAutoresizingMaskIntoConstraints="NO" id="FRX-a8-SNr" userLabel="Map Center Pin Image">
                                 <rect key="frame" x="172" y="288" width="30" height="55"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lsd-8t-Anu">
+                                <rect key="frame" x="270" y="28" width="97" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Delete Marker"/>
+                                <connections>
+                                    <action selector="deleteMarker:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nhR-g9-ck3"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xbk-Nt-R7m">
                                 <rect key="frame" x="8" y="28" width="32" height="32"/>
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -57,13 +65,16 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="centerY" secondItem="FRX-a8-SNr" secondAttribute="bottom" id="2sY-Lk-u3A"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="q9R-tw-Qd6" secondAttribute="trailing" id="HtQ-Mi-QTZ"/>
                             <constraint firstItem="q9R-tw-Qd6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KXZ-JN-FKm"/>
+                            <constraint firstItem="Lsd-8t-Anu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="P3e-fn-gR0"/>
                             <constraint firstItem="8IB-sT-Cyf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PZ9-0M-N3V"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8IB-sT-Cyf" secondAttribute="bottom" id="STv-Vt-iHF"/>
                             <constraint firstItem="xbk-Nt-R7m" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="Tn3-mO-esy"/>
                             <constraint firstItem="xbk-Nt-R7m" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="TnY-So-5C4"/>
                             <constraint firstItem="FRX-a8-SNr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WbH-gW-FJ9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Lsd-8t-Anu" secondAttribute="trailing" constant="8" id="ebY-wY-bL7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8IB-sT-Cyf" secondAttribute="trailing" id="lCF-S7-k9v"/>
                             <constraint firstItem="q9R-tw-Qd6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="nf0-2M-4QS"/>
+                            <constraint firstItem="Lsd-8t-Anu" firstAttribute="leading" secondItem="xbk-Nt-R7m" secondAttribute="trailing" constant="230" id="rE4-KA-UxV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="q9R-tw-Qd6" secondAttribute="bottom" id="w9N-B0-i0T"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
